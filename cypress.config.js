@@ -1,11 +1,17 @@
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
-  projectId: 'dk2ho7',
+  projectId: 'te6y4i',
   e2e: {
+    // testIsolation: false,
     baseUrl: "https://practicetestautomation.com/practice-test-login/",
     setupNodeEvents(on, config) {
-      // implement node event listeners here
+      on('after:run', (results) => {
+        if (results) {
+          // results will be undefined in interactive mode
+          console.log('123123')
+        }
+      })
     },
   },
 

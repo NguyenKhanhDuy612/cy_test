@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Page</title>
+</head>
+<body>
+    <h1>Welcome to the Test Page</h1>
+    <img src="image.jpg" alt="Test Image">
+    <button id="testButton">Click Me</button>
+    <input type="text" id="testInput" placeholder="Enter text here">
+	// create input chose file image from my computer
+	<input type="file" id="testFile" accept="image/*">
+	<script>
+		document.getElementById('testButton').addEventListener('click', () => {
+			// open link img
+			window.open('image.jpg');
+		});
+	</script>
+
+</body>
+</html>

@@ -23,3 +23,9 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+import 'cypress-file-upload';
+Cypress.Commands.add('showH1Text', () => {
+	cy.get('h1').then(($el) => {
+		cy.log($el.text());
+	});
+});
